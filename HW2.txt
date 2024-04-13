@@ -28,14 +28,16 @@ public class HW2 {
 		driver.findElement(By.className("header__search__button")).click();
 		Thread.sleep(4000);
 		//driver.findElement(By.className("region-list is-open")).click();
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		//driver.findElement(By.className("region-list is-open")).click();
 		// la fel nu merge (((  si nici dupa id de mai jos 
 		//driver.findElement(By.id("js-region-toggle")).click();	
 		//driver.findElement(By.tagName("<span>Moldova</span>")).click();
 		//driver.findElement(By.tagName("Moldova")).click();
 		
-		
+		driver.navigate().back();
+		Thread.sleep(3000);
+		driver.findElement(By.className("header_bar_nav_icon header_bar_nav_icon_ad")).click();
 	}
 	
 
