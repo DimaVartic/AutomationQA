@@ -1,0 +1,76 @@
+package ui;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class HW3 {
+
+public static void main(String[] args) throws InterruptedException {
+		
+		
+		WebDriverManager.chromedriver().setup();
+	
+		ChromeDriver driver = new ChromeDriver();
+		 driver.get("https://korjik.md/");
+		driver.manage().window().maximize();
+		//Thread.sleep(3000);
+		
+	//  ABSOLUT xPath locator
+		
+		driver.findElement(By.xpath("html/body/div/div/div/div/div/a")).click();
+		Thread.sleep(4000);
+		
+		
+		// xPath relative locator
+		
+		//driver.findElement(By.xpath("//a[@class='tn-atom']")).click();
+		//straniu, cu elementul a de mai sus nu a mers, dar cu <div> in care se afla <a> a mers
+		driver.findElement(By.xpath("//div[@class='t396__elem tn-elem tn-elem__4344011211641759344959']")).click();
+		Thread.sleep(3000);
+		
+		//XPATH  text()
+		
+		driver.findElement(By.xpath("//a[text()=‘Cafea’")).click();   //  NU MERGE !!!!
+		
+		Thread.sleep(3000);
+
+
+	// XPATH=//tagname[@Attribute=‘Value’ and @Attribute=‘Value’]
+
+	// XPATH=//tagname[@Attribute=‘Value’ or @Attribute=‘Value’]
+		
+		driver.findElement(By.xpath("//div[@class='t396__elem tn-elem tn-elem__4357114951649938961664' and @data-elem-id='1649938961664']")).click();
+
+		// SAME NU MERGE :D
+		
+		
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//div[@class='t396__elem tn-elem tn-elem__4357114931641759064418' or @data-elem-type='button']")).click();
+
+		// NU O SA CREDETI, DAR TOT NU MERGE oO
+		
+		
+		/*
+		// xPath starts with
+		
+		driver.get("https://999.md/");
+		driver.manage().window().maximize();
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("//div[starts-with(@id,'js-region')]")).click();
+		Thread.sleep(3000);
+		
+		// xPath ends with
+		
+		driver.findElement(By.xpath("//div[ends-with(@id,'close')]")).click();  // TOOOT NU MEEEERGE !!!!
+		
+		*/
+		
+		
+		
+		
+	
+   }
+  
+}
