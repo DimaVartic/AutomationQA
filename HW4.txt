@@ -1,0 +1,65 @@
+package ui;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class HW4 {
+
+public static void main(String[] args) throws InterruptedException {
+		
+
+		WebDriverManager.chromedriver().setup();
+	
+		ChromeDriver driver = new ChromeDriver();
+		 driver.get("https://www.olx.ro/");
+		 driver.manage().window().maximize();
+		 
+		 Thread.sleep(2000);
+		 
+		 driver.findElement(By.id("onetrust-accept-btn-handler")).click();
+		 Thread.sleep(2000);
+		 driver.findElement(By.className("css-1qsx3gp")).click();
+		 Thread.sleep(2000);
+		driver.findElement(By.cssSelector("input#search")).sendKeys("Apartament");
+		 Thread.sleep(2000);
+		 driver.findElement(By.className("css-z9381g")).click();
+		 
+		 Thread.sleep(4000);
+		 
+		 
+		 driver.findElement(By.cssSelector("div.css-1qvyz1h[data-cy='category-dropdown'][data-testid='category-dropdown']")).click();
+		 Thread.sleep(2000);
+		 
+		 driver.findElement(By.cssSelector("li.css-11lsdm2[data-categoryid='3']")).click();
+		 Thread.sleep(4000);
+		 //
+		// driver.findElement(By.cssSelector("div.multi-select-head css-1ee1qo5[data-testid='dropdown-head']")).click();
+		 
+		// driver.findElement(By.className("div.css-t0lbh8[data-testid='flyout-wrapper']")).click();
+		 
+		// driver.findElement(By.className("div[role='button'][data-testid='flyout-toggle']")).click();
+		 
+		 driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[3]/form/div[3]/div[1]/div/div[2]/div/div/div/div")).click();
+		 Thread.sleep(2000);
+		 driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[3]/form/div[3]/div[1]/div/div[2]/div/div/div[2]/div/div[2]/label/p")).click();
+		 Thread.sleep(3000);
+		 
+		 
+		 driver.findElement(By.cssSelector("input[aria-labelledby^='range-from-input-label']")).click();
+		 Thread.sleep(2000);
+		 driver.findElement(By.cssSelector("input[aria-labelledby$='-from-input-label']")).sendKeys("40");
+		 Thread.sleep(2000);
+		 driver.findElement(By.cssSelector("input[placeholder^='până la']")).click();
+		 Thread.sleep(2000);
+		 driver.findElement(By.cssSelector("input[name*='-to-input']")).sendKeys("70");
+		 Thread.sleep(2000);
+		 driver.findElement(By.cssSelector("button[name^='searchBtn'][data-testid$='-submit']")).click();
+		 Thread.sleep(4000);
+		 driver.findElement(By.cssSelector("input[data-testid^='search-input']")).clear();
+		 
+		 
+}
+	
+}
