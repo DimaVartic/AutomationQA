@@ -34,7 +34,7 @@ public static void main(String[] args) throws InterruptedException {
 		 
 		 driver.findElement(By.cssSelector("li.css-11lsdm2[data-categoryid='3']")).click();
 		 Thread.sleep(4000);
-		
+		 
 		 
 		// driver.findElement(By.className("div.css-t0lbh8[data-testid='flyout-wrapper']")).click();
 		 
@@ -57,7 +57,10 @@ public static void main(String[] args) throws InterruptedException {
 		 driver.findElement(By.cssSelector("button[name^='searchBtn'][data-testid$='-submit']")).click();
 		 Thread.sleep(4000);
 		 driver.findElement(By.cssSelector("input[data-testid^='search-input']")).clear();
-		 
+		 Thread.sleep(2000);
+		 driver.findElement(By.cssSelector("input[data-testid^='search-input']")).sendKeys("Automobil");
+		 Thread.sleep(2000);
+		 driver.findElement(By.cssSelector("button[name^='searchBtn'][data-testid$='-submit']")).click();
 		 
 }
 	
