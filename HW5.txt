@@ -1,0 +1,57 @@
+package ui;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Lesson5 {
+
+public static void main(String[] args) throws InterruptedException {
+		
+
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new ChromeDriver();
+	
+		driver.get("https://www.olx.ro/");
+		 driver.manage().window().maximize(); 
+		 Thread.sleep(2000);
+		 driver.findElement(By.id("onetrust-accept-btn-handler")).click();
+		 Thread.sleep(2000);
+	
+	
+		driver.findElement(By.id("search")).sendKeys("Jante Porsche/Piese auto/Injectoare/discuri/arcuri");
+		 Thread.sleep(2000);
+		driver.findElement(By.cssSelector("div.css-z9381g")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.cssSelector("div.css-u2ayx9")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.cssSelector("button[type='button'][data-testid='purchase-button']")).click();
+		Thread.sleep(6000);
+		
+		driver.findElement(By.cssSelector("input.css-2os53m")).sendKeys("dvartic14@gmail.com");
+		 Thread.sleep(2000);
+		 driver.findElement(By.cssSelector("input.css-1kzly1g")).sendKeys("Start123456789!");
+		 Thread.sleep(2000);
+		 driver.findElement(By.cssSelector("button[data-testid='login-submit-button'][type='submit']")).click();
+		 Thread.sleep(6000);
+		 
+		 
+		driver.findElement(By.cssSelector("label.css-celc0m[data-testid='Fan Courier']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("input.css-3uaho6[name='personalDetails.firstName']")).sendKeys("Test");
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("input.css-3uaho6[name='personalDetails.lastName']")).sendKeys("Test");
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("input.css-3uaho6[name='personalDetails.email']")).sendKeys("test@mail.com");
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("input.css-1e3rrnh")).sendKeys("721234567");
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("input.css-3uaho6[name='personalDetails.address.addressLine']")).sendKeys("Test Adresa");
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("input.css-g2r1l4[name='personalDetails.address.cityAndCounty']")).sendKeys("Bucuresci, Hunedoara");
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("button.css-165srwn")).click();
+		
+	}
+}
