@@ -125,6 +125,7 @@ public class HW9 {
 		
 		//14 Utilizatorul tapeaza valorile "TEST" in input-ul "Prenume"
 		driver.findElement(By.id("billing_first_name")).sendKeys("TEST");
+		Thread.sleep(2000);
 		takeScreenshot(driver, "14.tapeaza valorile 'TEST' in input-ul 'Prenume'");
 		
 		
@@ -135,7 +136,7 @@ public class HW9 {
 		
 		//16 Utilizatorul alege Municipiul "Bălți"
 		driver.findElement(By.xpath("//*[@id=\"billing_state_field\"]/span/span/span[1]")).click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).sendKeys("Bălți");
@@ -151,42 +152,44 @@ public class HW9 {
 		
 		//17 Utilizatorul tapeaza valorile "TEST" in input-ul "Oraș "
 		driver.findElement(By.id("billing_city")).sendKeys("TEST");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		takeScreenshot(driver, "17.tapeaza valorile \"TEST\" in input-ul \"Oraș");
 		
 		
 		//18 Utilizatorul tapeaza valorile "TEST" in input-ul "Adresa  "
 		driver.findElement(By.id("billing_address_1")).sendKeys("TEST");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		takeScreenshot(driver, "18.tapeaza valorile \"TEST\" in input-ul \"Adresa ");
 		
 		
 		//19 Utilizatorul tapeaza valorile "069111111" in input-ul "Telefon  "
 		driver.findElement(By.id("billing_phone")).sendKeys("069111111");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		takeScreenshot(driver, "19.tapeaza valorile \"069111111\" in input-ul \"Telefon");
 		
 		
 		//20 Utilizatorul tapeaza valorile "TEST@mail.com" in input-ul "Adresa de e-mail"
 		driver.findElement(By.id("billing_email")).sendKeys("TEST@mail.com");
+		Thread.sleep(2000);
 		takeScreenshot(driver, "20.tapeaza valorile \"TEST@mail.com\" in input-ul \"Adresa de e-mail");
 		
 		
 		//21 Utilizatorul da click pe radio butonul "Contactați-mă prin telefon"
 		WebElement radioButtonCbPH = driver.findElement(By.xpath("//*[@id=\"order_confirm_1\"]"));
 		radioButtonCbPH.click();
-		Thread.sleep(1500);
+		Thread.sleep(2000);
 		takeScreenshot(driver, "21.click pe radio butonul \"Contactați-mă prin telefon\"");
 		
 		//22 Utilizatorul da click pe radio butonul " Pungă de hîrtie"
 		WebElement radioButtonPdH = driver.findElement(By.xpath("//*[@id=\"packaging_paper bag\"]"));
 		radioButtonPdH.click();
-		Thread.sleep(1500);
+		Thread.sleep(3000);
 		takeScreenshot(driver, "22.click pe radio butonul \" Pungă de hîrtie\"");
 		
 		
 		//23 Utilizatorul da click pe checkbox-ul cu termeni și condiții 
 		driver.findElement(By.id("terms")).click();
+		Thread.sleep(2000);
 		takeScreenshot(driver, "23.lick pe checkbox-ul cu termeni și condiții ");
 		
 		
@@ -209,4 +212,3 @@ public class HW9 {
 	}
 
 }
-
