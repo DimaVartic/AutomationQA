@@ -49,16 +49,16 @@ public class HW10 {
 	}
 	
 	
-		@Test(priority=1, description="2 Utilizatorul apasa butonul cancel notificari")
-		public void cancelNotifications() throws InterruptedException, IOException {
+	@Test(priority=1, description="2 Utilizatorul apasa butonul cancel notificari")
+	public void cancelNotifications() throws InterruptedException, IOException {
 		driver.findElement(By.id("ddwppwa-prompt-cancel-button")).click();
 		Thread.sleep(2000);
 		takeScreenshot(driver, "2.Cancel button");
 		
 		}
 		
-		@Test(priority=2, description="3 Utilizatorul face hover pe menu-ul Shop")
-		public void menuShop() throws InterruptedException, IOException {
+	@Test(priority=2, description="3 Utilizatorul face hover pe menu-ul Shop")
+	public void menuShop() throws InterruptedException, IOException {
 		WebElement shopMenu = driver.findElement(By.id("menu-item-100527"));
 		Actions hoverAction = new Actions(driver);
 		hoverAction.moveToElement(shopMenu).perform();
@@ -67,23 +67,23 @@ public class HW10 {
 		}
 	
 		
-		@Test(priority=3, description="4 Utilizatorul da click pe categoria \"Barbati\"")
-		public void shopeMenu() throws InterruptedException, IOException {
+	@Test(priority=3, description="4 Utilizatorul da click pe categoria \"Barbati\"")
+	public void shopeMenu() throws InterruptedException, IOException {
 		driver.findElement(By.xpath("//*[@id=\"menu-item-100527\"]/div/div/div/div[2]/div/div/ul[4]/li/a/span")).click();
 		Thread.sleep(4000);
 		takeScreenshot(driver, "4.Click categoria 'Barbati'");
 		}
 		
-		@Test(priority=4, description="5 Utilizatorul da click pe articolul \"Instrucțiuni de îngrijire a pielii bărbaților\"")
-		public void firstArticleClick() throws InterruptedException, IOException {
+	@Test(priority=4, description="5 Utilizatorul da click pe articolul \"Instrucțiuni de îngrijire a pielii bărbaților\"")
+	public void firstArticleClick() throws InterruptedException, IOException {
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div/div[4]/div[2]/div[1]/div/div[2]/div[2]/a")).click();
 		Thread.sleep(4000);
 		takeScreenshot(driver, "5.Click Article");
 		}
 		
 		
-		@Test(priority=5, description="6 Utilizatorul face scorll pana la sectiunea \"Recenzii\"")
-		public void recenziiClick() throws InterruptedException, IOException {
+	@Test(priority=5, description="6 Utilizatorul face scorll pana la sectiunea \"Recenzii\"")
+	public void recenziiClick() throws InterruptedException, IOException {
 		WebElement recenziiSection = driver.findElement(By.xpath("//*[@id=\"tab-item-title-reviews\"]/div/span"));
 		Actions scrollAction = new Actions(driver);
 		scrollAction.moveToElement(recenziiSection).perform();
@@ -91,8 +91,8 @@ public class HW10 {
 		takeScreenshot(driver, "6.Click sectiunea 'Recenzii'");
 		}
 		
-		@Test(priority=6, description="7 Utilizatorul navigheaza la pagina anterioara")
-		public void navBack() throws InterruptedException, IOException {
+	@Test(priority=6, description="7 Utilizatorul navigheaza la pagina anterioara")
+	public void navBack() throws InterruptedException, IOException {
 		driver.navigate().back();
 		Thread.sleep(3000);
 		takeScreenshot(driver, "7.Navigheaza inapoi");
@@ -100,46 +100,46 @@ public class HW10 {
 		
 		
 		
-		@Test(priority=7, description="8 Utilizatorul da click pe produsul \" Îngrijire pentru bărbați cu ten uscat (35-45 ani)\"")
-		public void productClick() throws InterruptedException, IOException {
+	@Test(priority=7, description="8 Utilizatorul da click pe produsul \" Îngrijire pentru bărbați cu ten uscat (35-45 ani)\"")
+	public void productClick() throws InterruptedException, IOException {
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div/div[4]/div[2]/div[3]/div/div[1]/a/img")).click();
 		Thread.sleep(3000);
 		takeScreenshot(driver, "8.Click pe produs");
 		}
 		
-		@Test(priority=8, description="9 Utilizatorul sterge valorile din input-ul cu cantiatea produselor")
-		public void valDelete() throws InterruptedException, IOException {
+	@Test(priority=8, description="9 Utilizatorul sterge valorile din input-ul cu cantiatea produselor")
+	public void valDelete() throws InterruptedException, IOException {
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/div/div[2]/div[1]/div[2]/div/div/div[2]/div/form/div[1]/input[2]")).clear();
 		takeScreenshot(driver, "9.Sterge cantitea");
 		}
 		
 		
-		@Test(priority=9, description="10 Utilizatorul tapeaza valoarea \"3\" in input")
-		public void valInsert() throws InterruptedException, IOException { 
+	@Test(priority=9, description="10 Utilizatorul tapeaza valoarea \"3\" in input")
+	public void valInsert() throws InterruptedException, IOException { 
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/div/div[2]/div[1]/div[2]/div/div/div[2]/div/form/div[1]/input[2]")).sendKeys("3");
 		Thread.sleep(2000);
 		takeScreenshot(driver, "10.Introduce cantintea");
 		}
 		
 		
-		@Test(priority=10, description="11 Utilizatorul da click pe butonul \"ÎN COȘ\"")
-		public void clickBag() throws InterruptedException, IOException {
+	@Test(priority=10, description="11 Utilizatorul da click pe butonul \"ÎN COȘ\"")
+	public void clickBag() throws InterruptedException, IOException {
 		driver.findElement(By.xpath("//*[@id=\"product-172963\"]/div[1]/div[2]/div/div/div[2]/div/form/button[1]")).click();
 		Thread.sleep(2000);
 		takeScreenshot(driver, "11.Click butonul 'ÎN COȘ'");
 		}
 		
 		
-		@Test(priority=11, description="12 Utilizatorul da click pe butonul \"COȘUL TAU\"")
-		public void clickYourBag() throws InterruptedException, IOException {
+	@Test(priority=11, description="12 Utilizatorul da click pe butonul \"COȘUL TAU\"")
+	public void clickYourBag() throws InterruptedException, IOException {
 		driver.findElement(By.xpath("/html/body/div[1]/header/div/div[3]/div/div/div[3]/div[3]/a/span[1]")).click();
 		Thread.sleep(2000);
 		takeScreenshot(driver, "12.Click butonul 'COȘUL TAU'");
 		}
 		
 		
-		@Test(priority=12, description="13 Utilizatorul da click pe butonul \" FINALIZARE\"")
-		public void clickFin() throws InterruptedException, IOException {
+	@Test(priority=12, description="13 Utilizatorul da click pe butonul \" FINALIZARE\"")
+	public void clickFin() throws InterruptedException, IOException {
 		driver.findElement(By.xpath("/html/body/div[4]/div[2]/div/div[2]/p[2]/a[2]")).click();
 		Thread.sleep(2000);
 		takeScreenshot(driver, "13.Click butonul 'FINALIZARE'");
@@ -152,16 +152,16 @@ public class HW10 {
 		
 		
 		
-		@Test(priority=13, description="14 Utilizatorul tapeaza valorile \"TEST\" in input-ul \"Prenume\"")
-		public void insertFirstName() throws InterruptedException, IOException {
+	@Test(priority=13, description="14 Utilizatorul tapeaza valorile \"TEST\" in input-ul \"Prenume\"")
+	public void insertFirstName() throws InterruptedException, IOException {
 		driver.findElement(By.id("billing_first_name")).sendKeys("TEST");
 		Thread.sleep(2000);
 		takeScreenshot(driver, "14.tapeaza valorile 'TEST' in input-ul 'Prenume'");
 		}
 		
 		
-		@Test(priority=14, description="15 Utilizatorul tapeaza valorile \"TEST\" in input-ul \"Nume\"")
-		public void insertLastName() throws InterruptedException, IOException {
+	@Test(priority=14, description="15 Utilizatorul tapeaza valorile \"TEST\" in input-ul \"Nume\"")
+	public void insertLastName() throws InterruptedException, IOException {
 		driver.findElement(By.id("billing_last_name")).sendKeys("TEST");
 		Thread.sleep(2000);
 		takeScreenshot(driver, "15.tapeaza valorile \"TEST\" in input-ul \"Nume\"");
@@ -169,8 +169,8 @@ public class HW10 {
 		
 		
 		
-		@Test(priority=15, description="//16 Utilizatorul alege Municipiul \"Bălți\"")
-		public void dropDown() throws InterruptedException, IOException {	
+	@Test(priority=15, description="//16 Utilizatorul alege Municipiul \"Bălți\"")
+	public void dropDown() throws InterruptedException, IOException {	
 		driver.findElement(By.xpath("//*[@id=\"billing_state_field\"]/span/span/span[1]")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("/html/body/span/span/span[1]/input")).click();
@@ -181,40 +181,40 @@ public class HW10 {
 		}
 		
 		
-		@Test(priority=16, description="17 Utilizatorul tapeaza valorile \"TEST\" in input-ul \"Oraș \"")
-		public void insertCity() throws InterruptedException, IOException {
+	@Test(priority=16, description="17 Utilizatorul tapeaza valorile \"TEST\" in input-ul \"Oraș \"")
+	public void insertCity() throws InterruptedException, IOException {
 		driver.findElement(By.id("billing_city")).sendKeys("TEST");
 		Thread.sleep(3000);
 		takeScreenshot(driver, "17.tapeaza valorile \"TEST\" in input-ul \"Oraș");
 		}
 		
 		
-		@Test(priority=17, description="18 Utilizatorul tapeaza valorile \"TEST\" in input-ul \"Adresa  \"")
-		public void insertBillingAddress() throws InterruptedException, IOException {
+	@Test(priority=17, description="18 Utilizatorul tapeaza valorile \"TEST\" in input-ul \"Adresa  \"")
+	public void insertBillingAddress() throws InterruptedException, IOException {
 		driver.findElement(By.id("billing_address_1")).sendKeys("TEST");
 		Thread.sleep(3000);
 		takeScreenshot(driver, "18.tapeaza valorile \"TEST\" in input-ul \"Adresa ");
 		}
 		
 		
-		@Test(priority=18, description="19 Utilizatorul tapeaza valorile \"069111111\" in input-ul \"Telefon  \"")
-		public void insertPhoneNr() throws InterruptedException, IOException {
+	@Test(priority=18, description="19 Utilizatorul tapeaza valorile \"069111111\" in input-ul \"Telefon  \"")
+	public void insertPhoneNr() throws InterruptedException, IOException {
 		driver.findElement(By.id("billing_phone")).sendKeys("069111111");
 		Thread.sleep(3000);
 		takeScreenshot(driver, "19.tapeaza valorile \"069111111\" in input-ul \"Telefon");
 		}
 		
 		
-		@Test(priority=19, description="20 Utilizatorul tapeaza valorile \"TEST@mail.com\" in input-ul \"Adresa de e-mail\"")
-		public void insertEmail() throws InterruptedException, IOException {
+	@Test(priority=19, description="20 Utilizatorul tapeaza valorile \"TEST@mail.com\" in input-ul \"Adresa de e-mail\"")
+	public void insertEmail() throws InterruptedException, IOException {
 		driver.findElement(By.id("billing_email")).sendKeys("TEST@mail.com");
 		Thread.sleep(2000);
 		takeScreenshot(driver, "20.tapeaza valorile \"TEST@mail.com\" in input-ul \"Adresa de e-mail");
 		}
 		
 		
-		@Test(priority=20, description="21 Utilizatorul da click pe radio butonul \"Contactați-mă prin telefon\"")
-		public void clickRadioButton1() throws InterruptedException, IOException {
+	@Test(priority=20, description="21 Utilizatorul da click pe radio butonul \"Contactați-mă prin telefon\"")
+	public void clickRadioButton1() throws InterruptedException, IOException {
 		WebElement radioButtonCbPH = driver.findElement(By.xpath("//*[@id=\"order_confirm_1\"]"));
 		radioButtonCbPH.click();
 		Thread.sleep(2000);
@@ -222,8 +222,8 @@ public class HW10 {
 		}
 		
 		
-		@Test(priority=21, description="22 Utilizatorul da click pe radio butonul \" Pungă de hîrtie\"")
-		public void clickRadioButton2() throws InterruptedException, IOException {
+	@Test(priority=21, description="22 Utilizatorul da click pe radio butonul \" Pungă de hîrtie\"")
+	public void clickRadioButton2() throws InterruptedException, IOException {
 		WebElement radioButtonPdH = driver.findElement(By.xpath("//*[@id=\"packaging_paper bag\"]"));
 		radioButtonPdH.click();
 		Thread.sleep(3000);
@@ -231,8 +231,8 @@ public class HW10 {
 		}
 		
 		
-		@AfterTest(description="23 Utilizatorul da click pe checkbox-ul cu termeni și condiții ")
-		public void acceptTerms() throws InterruptedException, IOException {
+	@AfterTest(description="23 Utilizatorul da click pe checkbox-ul cu termeni și condiții ")
+	public void acceptTerms() throws InterruptedException, IOException {
 		driver.findElement(By.id("terms")).click();
 		Thread.sleep(2000);
 		takeScreenshot(driver, "23.lick pe checkbox-ul cu termeni și condiții ");
