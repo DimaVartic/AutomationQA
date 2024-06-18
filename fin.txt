@@ -1,0 +1,63 @@
+package ui;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class FinalTest {
+	
+	
+	static ChromeDriver driver = new ChromeDriver();
+	public static void main(String[] args) throws InterruptedException {
+	driver.get("https://www.olx.ro/");
+	 driver.manage().window().maximize();
+	 
+	 Thread.sleep(2000);
+	
+	 driver.findElement(By.cssSelector("button[id='onetrust-accept-btn-handler']")).click();
+	 Thread.sleep(1000);
+	 driver.findElement(By.xpath("//*[@id=\"hydrate-root\"]/header/div/div/div[2]/a")).click();
+	 Thread.sleep(2000);
+	 driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/form/div[1]/div/div/input")).sendKeys("dvartic14@gmail.com");
+	 Thread.sleep(2000);
+	 driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/form/div[2]/div/div/div/input")).sendKeys("Test123456789!");
+	 Thread.sleep(2000);
+	 driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/form/button[2]/span/span")).click();
+	 Thread.sleep(5000);
+	 driver.findElement(By.xpath("//*[@id=\"client-root\"]/header/div/a/span/span[1]")).click();
+	 Thread.sleep(2000);
+	driver.findElement(By.xpath("//*[@id=\"search\"]")).sendKeys("Jante aliaj noi SKODA Octavia Superb - 5x112 R17");
+	 Thread.sleep(2000);
+	 driver.findElement(By.xpath("//*[@id=\"searchmain-container\"]/div[1]/div/div/div/form/div/div[3]/button")).click();
+	 Thread.sleep(2000);
+	 driver.findElement(By.xpath("//*[@id=\"257626122\"]/div/div/div[2]/div[1]/a")).click();
+	 Thread.sleep(2000);
+	 driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[2]/div[3]/div[2]/section/div[1]/button")).click();
+	 Thread.sleep(2000);
+	 WebElement imagineSection = driver.findElement(By.xpath("//*[@id=\\\"mainContent\\\"]/main/section[4]/div/button"));
+		Actions scrollAction = new Actions(driver);
+		scrollAction.moveToElement(imagineSection);
+		scrollAction.perform();
+	 driver.findElement(By.xpath("//*[@id=\"mainContent\"]/main/section[4]/div/button")).click();
+	 Thread.sleep(2000);
+	 driver.findElement(By.xpath("//*[@id=\"mainContent\"]/main/section[5]/div/svg/path[1]")).click();
+	 Thread.sleep(2000);
+	 driver.findElement(By.xpath("//*[@id=\"mainContent\"]/main/section[6]/div/button")).click();
+	 Thread.sleep(5000);
+	 driver.findElement(By.xpath("//*[@id=\"mainContent\"]/main/section[5]/div/button[2]")).click();
+	 Thread.sleep(5000);
+	 driver.findElement(By.xpath("//*[@id=\"body-container\"]/div/div/div/div/div/div[3]/div[1]/div/div[2]/div[2]/div[2]/div/button[2]/div/div[1]")).click();
+	 Thread.sleep(2000);
+	 driver.switchTo().frame(1);
+	 Thread.sleep(2000);
+	 WebElement radioButton = driver.findElement(By.xpath("/html/body/div[9]/div/div/div/div/div[6]/label"));
+	 radioButton.click();
+	 Thread.sleep(2000);
+	 driver.findElement(By.xpath("/html/body/div[9]/div/div/div/div/div[8]/button[2]/div/div")).click();
+	 Thread.sleep(4000);
+	 driver.quit();
+	 
+	}
+
+}
